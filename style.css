@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,800;1,800&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background-color: #131313;
+	min-height: 100vh;
+}
+.container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.container .card{
+	position: relative;
+	width: 320px;
+	height: 480px;
+	background-color: #232323;
+	border-radius: 20px;
+	cursor: pointer;
+	overflow: hidden;
+}
+.container .card:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #9bdc28;
+	clip-path: circle(150px at 80% 20%);
+	transition: 500ms ease-in-out;
+}
+.container .card:hover:before{
+	clip-path: circle(300px at 80% -20%);
+}
+.container .card:after{
+	content: "Nike";
+	position: absolute;
+	top: 35%;
+	left: -15%;
+	font-size: 12em;
+	font-weight: 800;
+	font-style: italic;
+	color: rgba(255,255,255,0.04)
+}
+.container .card .imgBx{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1000;
+	width: 100%;
+	height: 220px;
+	transition: 500ms;
+}
+.container .card:hover .imgBx{
+	top: 0;
+	transform: translateY(0);
+}
+.container .card .imgBx img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 270px;
+}
+.container .card .content{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	transition: 1s;
+	z-index: 10;
+}
+.container .card:hover .content{
+	height: 210px;
+}
+.container .card .content h2{
+	position: relative;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #fff;
+	margin: 0;
+}
+.container .card .content .size,
+.container .card .content .color{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 20px;
+	transition: 500ms;
+	opacity: 0;
+	visibility: hidden;
+}
+.container .card:hover .content .size{
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.45s;
+}
+.container .card:hover .content .color{
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.6s;
+}
+.container .card .content .size h3,
+.container .card .content .color h3{
+	color: white;
+	font-weight: 300;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-right: 10px;
+	user-select: none;
+}
+.container .card .content .size span{
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 26px;
+	color: #111;
+	background-color: #fff;
+	transition: 300ms;
+	border-radius: 5px;
+	margin: 0 5px;
+	cursor: pointer;
+}
+.container .card .content .size span:hover{
+	background-color: #9bdc28;
+}
+.container .card .content .color span{
+	width: 20px;
+	height: 20px;	
+	border-radius: 20px;
+	margin: 0 5px;
+	transition: 200ms;
+}
+.container .card .content .color span:hover{
+	transform: scale(1.2);
+}
+.container .card .content .color span:nth-child(2){
+	background-color: #9bdc28;
+}
+.container .card .content .color span:nth-child(3){
+	background-color: #03a9f4;
+}
+.container .card .content .color span:nth-child(4){
+	background-color: #e91e63;
+}
+.container .card .content a{
+	display: inline-block;
+	text-decoration: none;
+	padding: 8px 20px;
+	background-color: white;
+	color: #111;
+	font-size: 14px;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	margin-top: 10px;
+	font-weight: 600;
+	opacity: 0;
+	transition: 500ms;
+	transform: translateY(50px);
+}
+.container .card:hover .content a{
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.75s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
