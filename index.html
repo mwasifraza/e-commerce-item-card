@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="card">
 			<div class="imgBx">
-				<img src="shoe.png">
+				<img src="green.png">
 			</div>
 			<div class="content">
 				<h2>Nike Shoes</h2>
@@ -24,13 +24,28 @@
 				</div>
 				<div class="color">
 					<h3>color : </h3>
-					<span></span>
-					<span></span>
-					<span></span>
+					<span class="bg" data-color="green"></span>
+					<span class="bg" data-color="blue"></span>
+					<span class="bg" data-color="red"></span>
 				</div>
 				<a href="#">Buy Now</a>
 			</div>
 		</div>
 	</div>
+
+	<script>
+		let colors = document.querySelectorAll('.bg');
+		let card = document.querySelector('.card');
+		let img = document.querySelector('img');
+		colors.forEach(e => {
+			e.addEventListener('click', () => {
+				let bg = e.getAttribute("data-color");
+				card.className = "";
+				card.classList.add('card');
+				card.classList.add(bg);
+				img.setAttribute("src", bg+".png");
+			})
+		})
+	</script>
 </body>
 </html>

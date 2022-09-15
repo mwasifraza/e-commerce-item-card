@@ -36,6 +36,12 @@ body{
 	clip-path: circle(150px at 80% 20%);
 	transition: 500ms ease-in-out;
 }
+.container .card.blue:before{
+	background-color: #2c3c57;
+}
+.container .card.red:before{
+	background-color: #930000;
+}
 .container .card:hover:before{
 	clip-path: circle(300px at 80% -20%);
 }
@@ -149,10 +155,10 @@ body{
 	background-color: #9bdc28;
 }
 .container .card .content .color span:nth-child(3){
-	background-color: #03a9f4;
+	background-color: #2c3c57;
 }
 .container .card .content .color span:nth-child(4){
-	background-color: #e91e63;
+	background-color: #930000;
 }
 .container .card .content a{
 	display: inline-block;
