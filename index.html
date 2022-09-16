@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="container">
-		<div class="card">
+		<div class="card green">
 			<div class="imgBx">
 				<img src="green.png">
 			</div>
@@ -39,7 +39,8 @@
 		let img = document.querySelector('img');
 		colors.forEach(e => {
 			e.addEventListener('click', () => {
-				let bg = e.getAttribute("data-color");
+				// let bg = e.getAttribute("data-color");
+				let bg = e.dataset.color;
 				card.className = "";
 				card.classList.add('card');
 				card.classList.add(bg);
