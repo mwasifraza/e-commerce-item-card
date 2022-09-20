@@ -146,6 +146,10 @@ body{
 .container .card .content .size span:hover{
 	background-color: #9bdc28;
 }
+.container .card .content .size span.active{
+	background-color: #9bdc28;
+	transform: scale(0.9);
+}
 .container .card .content .color span{
 	width: 20px;
 	height: 20px;	

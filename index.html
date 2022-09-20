@@ -17,10 +17,10 @@
 				<h2>Nike Shoes</h2>
 				<div class="size">
 					<h3>size : </h3>
-					<span>7</span>
-					<span>8</span>
-					<span>9</span>
-					<span>10</span>
+					<span class="sz active">7</span>
+					<span class="sz">8</span>
+					<span class="sz">9</span>
+					<span class="sz">10</span>
 				</div>
 				<div class="color">
 					<h3>color : </h3>
@@ -35,6 +35,7 @@
 
 	<script>
 		let colors = document.querySelectorAll('.bg');
+		let sizes = document.querySelectorAll('.sz');
 		let card = document.querySelector('.card');
 		let img = document.querySelector('img');
 		colors.forEach(e => {
@@ -45,6 +46,15 @@
 				card.classList.add('card');
 				card.classList.add(bg);
 				img.setAttribute("src", bg+".png");
+			})
+		});
+
+		sizes.forEach(e => {
+			e.addEventListener('click', () => {
+				for(const i of sizes){
+					i.classList.remove('active');
+				}
+				e.classList.add('active');
 			})
 		})
 	</script>
