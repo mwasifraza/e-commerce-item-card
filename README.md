@@ -6,7 +6,6 @@
 
 ```
   git clone https://github.com/mwasifraza/e-commerce-item-card.git
-  cd e-commerce-item-card
 ```
 
 * After the files have been downloaded you will get a folder with all the required files
